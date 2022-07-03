@@ -579,6 +579,8 @@ class Settings {
 
         this.$register.hide();
 
+        this.$acwing_login = this.$settings.find(".ac-game-settings-acwing img");
+
         this.root.$ac_game.append(this.$settings);
 
         this.start();
@@ -593,7 +595,17 @@ class Settings {
     add_listening_events() {
         this.add_listening_events_register(); // 注册页面的监听
         this.add_listening_events_login(); // 登陆页面的监听
+
+        this.add_listening_events_acwing_login();
     }
+
+    add_listening_events_acwing_login() {
+    	let outer = this;
+
+        this.$acwing_login.click(function(){
+            outer.acwing_login();
+        });
+}
 
 	add_listening_events_register() {
         let outer = this;
@@ -628,6 +640,19 @@ class Settings {
         this.$register.hide();
         this.$login.show();
     }
+
+    acwing_login() {
+    	$.ajax({
+            url: "https://app2433.acapp.acwing.com.cn/settings/acwing/web/apply_code",
+            type: "GET",
+            success: function(resp){
+                if (resp.result === "success") {
+                    window.location.replace(resp.apply_code_url); // 前端页面就重定向到向AcWingOS申请Code的页面
+                }
+            }
+        });
+
+	}
 
     login_on_remote() {  //在远程服务器上登录
         let outer = this;
