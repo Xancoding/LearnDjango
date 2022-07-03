@@ -561,25 +561,28 @@ class Settings {
 </div>
 `);
         this.$login = this.$settings.find(".ac-game-settings-login");
-        this.$login_username = this.$login.find(".ac-game-settings-username input"); // 用户名输入框
-        this.$login_password = this.$login.find(".ac-game-settings-password input"); // 密码输入框
-        this.$login_submit = this.$login.find(".ac-game-settings-submit button"); // 提交按钮
-        this.$login_error_message = this.$login.find(".ac-game-settings-error-message"); // 错误信息
-        this.$login_register = this.$login.find(".ac-game-settings-option"); // 注册选项
+        this.$login_username = this.$login.find(".ac-game-settings-username input");
+        this.$login_password = this.$login.find(".ac-game-settings-password input");
+        this.$login_submit = this.$login.find(".ac-game-settings-submit button");
+        this.$login_error_message = this.$login.find(".ac-game-settings-error-message");
+        this.$login_register = this.$login.find(".ac-game-settings-option");
+
         this.$login.hide();
 
         this.$register = this.$settings.find(".ac-game-settings-register");
-        this.$register_username = this.$register.find(".ac-game-settings-register input"); 
-        this.$register_password = this.$register.find(".ac-game-settings-password-first input"); 
-        this.$register_password_confirm = this.$register.find(".ac-game-settings-password-second input"); // 确认密码输入框
-        this.$register_submit = this.$register.find(".ac-game-settings-submit button");            
+        this.$register_username = this.$register.find(".ac-game-settings-username input");
+        this.$register_password = this.$register.find(".ac-game-settings-password-first input");
+        this.$register_password_confirm = this.$register.find(".ac-game-settings-password-second input");
+        this.$register_submit = this.$register.find(".ac-game-settings-submit button");
         this.$register_error_message = this.$register.find(".ac-game-settings-error-message");
-        this.$register_login = this.$register.find(".ac-game-settings-option"); // 登陆选项
+        this.$register_login = this.$register.find(".ac-game-settings-option");
+
         this.$register.hide();
 
         this.root.$ac_game.append(this.$settings);
 
         this.start();
+
     }
 
     start() {
