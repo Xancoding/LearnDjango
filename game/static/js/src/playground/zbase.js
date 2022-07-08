@@ -35,7 +35,9 @@ class AcGamePlayground {
         this.width = this.$playground.width();
         this.height = this.$playground.height();
         this.game_map = new GameMap(this);
-        
+       
+        this.mode = mode;
+
         this.resize();
 
         this.players = [];

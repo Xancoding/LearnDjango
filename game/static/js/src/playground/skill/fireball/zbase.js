@@ -44,6 +44,7 @@ class FireBall extends AcGameObject {
             let player = this.playground.players[i];
             if(this.player !== player && this.is_collision(player)) {
                 this.hit(player);
+                break;
             }
         }
     }
@@ -63,13 +64,28 @@ class FireBall extends AcGameObject {
     hit(player) {
         let angle = Math.atan2(player.y - this.y, player.x - this.x);
         player.is_attacked(angle, this.damage);
+
+        if (this.playground.mode === "multi mode") {
+            this.playground.mps.send_attack(player.uuid, player.x, player.y, angle, this.damage, this.uuid);
+        }
     }
     
 
     update() {
-        this.update_attack();
+        if(this.player.character !== "enemy") {
+             this.update_attack();
+        }
         this.update_move();
         this.render();
+    }
 
+    on_destroy() {
+        let fireballs = this.player.fireballs;
+        for (let i = 0; i < fireballs.length; i++) {
+            if (fireballs[i] === this) {
+                fireballs.splice(i, 1);
+                break;
+            }
+        }
     }
 }
