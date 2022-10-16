@@ -1,5 +1,5 @@
 # War of Walock
-- `Django && HTML && CSS && Javascript`
+- Django框架学习
 - [Acapp端](https://www.acwing.com/file_system/file/content/whole/index/content/5958610/)
 - [Web端](https://app2433.acapp.acwing.com.cn/)
 ## 操作方式
