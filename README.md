@@ -1,5 +1,4 @@
 # War of Walock
-## 简介
 - `Django && HTML && CSS && Javascript`
 - [Acapp端](https://www.acwing.com/file_system/file/content/whole/index/content/5958610/)
 - [Web端](https://app2433.acapp.acwing.com.cn/)
