@@ -32,7 +32,7 @@ class Particle extends AcGameObject {
     }
 
     update_move() {
-        if (this.speed < this.eps || this.radius < this.eps) {
+        if (this.speed < this.eps) {
             this.destroy();
             return false;
         }

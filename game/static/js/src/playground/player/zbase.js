@@ -35,11 +35,11 @@ class Player extends AcGameObject {
         if (this.character === "me") {
             this.fireball_coldtime = 3;  //单位：s
             this.fireball_img = new Image();
-            this.fireball_img.src = "https://cdn.acwing.com/media/article/image/2021/12/02/1_9340c86053-fireball.png";
+            this.fireball_img.src = "https://bu.dusays.com/2022/10/30/635e3be3d70e5.png";
 
             this.blink_coldtime = 5;
             this.blink_img = new Image();
-            this.blink_img.src = "https://cdn.acwing.com/media/article/image/2021/12/02/1_daccabdc53-blink.png";
+            this.blink_img.src = "https://bu.dusays.com/2022/10/30/635e3b4bbcbae.png";
         }
     }
 
