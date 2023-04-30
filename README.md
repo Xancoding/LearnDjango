@@ -1,4 +1,4 @@
-# War of Walock
+# War of Warlock
 - Django框架学习
 - [Acapp端](https://www.acwing.com/file_system/file/content/whole/index/content/5958610/)
 - [Web端](https://app2433.acapp.acwing.com.cn/)
